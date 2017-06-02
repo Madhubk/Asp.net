@@ -1,0 +1,13 @@
+
+
+
+   m.lstofflineBookingviewModelplus = ds.Tables[1].AsEnumerable().Select(x => new offlineBookingviewModelplus()
+                {
+                    suppliername = x.Field<string>("SupplierName"),
+                    PackageCategory = x.Field<string>("PackageCategory"),
+                    description = x.Field<string>("Description"),
+                    currency = x.Field<string>("Currency"),
+                    ROE = x.Field<decimal>("ROE"),
+                    Amount = x.Field<decimal>("Amount"),
+                    // paymentSchedule = x.Field<string>("PaymentScheduleOption"),
+                }).ToList();
